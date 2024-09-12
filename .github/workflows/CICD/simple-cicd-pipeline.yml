@@ -1,0 +1,11 @@
+name: Simple CI/CD pipeline
+
+on: [push]
+
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+    name: Continuous Integration
+    steps:
+      - name: Run Shell Command
+        run: echo "Hello World"
