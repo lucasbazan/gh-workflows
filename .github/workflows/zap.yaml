@@ -1,0 +1,19 @@
+name: OWASP ZAP scan
+on: [push]
+
+jobs:
+  run-zap-scan:
+    name: Run ZAP Scan
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout to master branch
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      # Execute ZAP DAST scan
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.10.0
+        with:
+          target: 'http://testphp.vulnweb.com
