@@ -6,11 +6,11 @@ jobs:
     name: Run ZAP Scan
     runs-on: ubuntu-latest
     steps:
-      # Checkout to master branch
+      # Checkout to main branch
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          ref: master
+          ref: main
 
       # Execute ZAP DAST scan
       - name: ZAP Scan
