@@ -1,6 +1,9 @@
 name: List Root Files
 
-on: [push]
+on:
+  push:
+    branches: 
+    - learning
 
 jobs:
   list-root-files:
